@@ -3,7 +3,6 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"templateserver/pkg/web/controller/user"
 )
 
 func InitAdminRoute(ar *gin.Engine) {
@@ -17,6 +16,6 @@ func InitAdminRoute(ar *gin.Engine) {
 func InitBusRoute(br *gin.Engine) {
 	userr := br.Group("/user")
 	{
-		userr.GET("/:userid", user.GetUserById)
+		userr.GET("/:userid", userController.GetUserById)
 	}
 }

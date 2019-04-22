@@ -1,10 +1,10 @@
 package web
 
 import (
-	"flag"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"templateserver/config"
 	"templateserver/pkg/web/controller"
 	"time"
 )
@@ -15,13 +15,11 @@ var (
 )
 
 func init() {
-	aport := flag.Int("aport", 8080, "admin port")
-	bport := flag.Int("bport", 9090, "business port")
-	//gin.SetMode(gin.ReleaseMode)
+	gin.SetMode(gin.ReleaseMode)
 	ar := gin.Default()
 	controller.InitAdminRoute(ar)
 	As = &http.Server{
-		Addr:           fmt.Sprintf(":%v", *aport),
+		Addr:           fmt.Sprintf(":%v", config.APort),
 		Handler:        ar,
 		ReadTimeout:    10 * time.Second,
 		WriteTimeout:   10 * time.Second,
@@ -31,7 +29,7 @@ func init() {
 	br := gin.Default()
 	controller.InitBusRoute(br)
 	Bs = &http.Server{
-		Addr:           fmt.Sprintf(":%v", *bport),
+		Addr:           fmt.Sprintf(":%v", config.BPort),
 		Handler:        br,
 		ReadTimeout:    10 * time.Second,
 		WriteTimeout:   10 * time.Second,
