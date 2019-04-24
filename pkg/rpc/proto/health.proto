@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package health;
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+option go_package = "templateserver/pkg/rpc/proto/health";
+
+// The definition of health info.
+message Health { string message = 1; }
+
+service HealthService {
+  rpc checkHealth(google.protobuf.Empty) returns(Health) {
+    option(google.api.http) = {get : "/health"};
+  }
+}

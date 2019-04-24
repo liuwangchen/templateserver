@@ -17,6 +17,7 @@ var (
 func init() {
 	gin.SetMode(gin.ReleaseMode)
 	ar := gin.Default()
+	//初始化admin route
 	controller.InitAdminRoute(ar)
 	As = &http.Server{
 		Addr:           fmt.Sprintf(":%v", config.APort),
@@ -27,6 +28,7 @@ func init() {
 	}
 
 	br := gin.Default()
+	//初始化业务route
 	controller.InitBusRoute(br)
 	Bs = &http.Server{
 		Addr:           fmt.Sprintf(":%v", config.BPort),
