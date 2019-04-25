@@ -10,6 +10,10 @@ var (
 	userDao dao.IUserDao
 )
 
+type BaseController struct {
+
+}
+
 func init() {
 	if config.IsMock {
 

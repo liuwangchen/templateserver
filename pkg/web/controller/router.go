@@ -3,7 +3,21 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"templateserver/config"
+	"templateserver/pkg/web/controller/impl"
 )
+
+var (
+	userController IUserController
+)
+
+func init() {
+	if config.IsMock {
+
+	} else {
+		userController = &impl.UserController{}
+	}
+}
 
 func InitAdminRoute(ar *gin.Engine) {
 	ar.GET("/ping", func(c *gin.Context) {

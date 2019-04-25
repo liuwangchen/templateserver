@@ -7,6 +7,7 @@ import (
 )
 
 type UserController struct {
+	BaseController
 }
 
 func (*UserController) GetUserById(c *gin.Context) {
