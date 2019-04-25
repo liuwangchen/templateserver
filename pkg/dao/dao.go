@@ -1,5 +1,5 @@
 package dao
 
-type IUser interface {
+type IUserDao interface {
 	GetUserById(id string) string
 }

@@ -4,12 +4,6 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"templateserver/pkg/dao"
-	"templateserver/pkg/dao/impl"
-)
-
-var (
-	userDao dao.IUser = &impl.UserDao{}
 )
 
 type UserController struct {
