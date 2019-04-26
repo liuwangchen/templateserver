@@ -30,6 +30,9 @@ func InitAdminRoute(ar *gin.Engine) {
 func InitBusRoute(br *gin.Engine) {
 	userr := br.Group("/user")
 	{
-		userr.GET("/:userid", userController.GetUserById)
+		userr.GET("/", userController.GetUserById)
+		userr.POST("/", userController.CreateUser)
+		userr.PUT("/:id", userController.UpdateUser)
+		userr.DELETE("/", userController.DeleteUser)
 	}
 }
