@@ -63,6 +63,12 @@
 			"revisionTime": "2019-04-18T02:45:37Z"
 		},
 		{
+			"checksumSHA1": "xWc9p5Kq5cQbDIwbXHdc9v8sdMU=",
+			"path": "github.com/go-sql-driver/mysql",
+			"revision": "d0a548181995c293eb09c61ef80099ba1cdbe8f5",
+			"revisionTime": "2019-04-23T11:20:50Z"
+		},
+		{
 			"checksumSHA1": "BP2buXHHOKxI5eYS2xELVng2kf4=",
 			"path": "github.com/golang/protobuf/jsonpb",
 			"revision": "b5d812f8a3706043e23a9cd5babf2e5423744d30",
@@ -157,6 +163,24 @@
 			"path": "github.com/grpc-ecosystem/grpc-gateway/utilities",
 			"revision": "5328886f9f5735cbc4f4819bf6b840a48609ad66",
 			"revisionTime": "2019-03-07T09:51:26Z"
+		},
+		{
+			"checksumSHA1": "PTjdwVQCZP870BNHcMkktJcQhG8=",
+			"path": "github.com/jinzhu/gorm",
+			"revision": "8b07437717e71c2ff00602ae19f8353ba10aafbb",
+			"revisionTime": "2019-03-10T12:17:21Z"
+		},
+		{
+			"checksumSHA1": "eECxSkwh0WmhLwaxHfkvcLOWS08=",
+			"path": "github.com/jinzhu/gorm/dialects/mysql",
+			"revision": "8b07437717e71c2ff00602ae19f8353ba10aafbb",
+			"revisionTime": "2019-03-10T12:17:21Z"
+		},
+		{
+			"checksumSHA1": "4eelJOSLZoDzLuaJvgilOBVNovU=",
+			"path": "github.com/jinzhu/inflection",
+			"revision": "04140366298a54a039076d798123ffa108fff46c",
+			"revisionTime": "2018-03-08T03:36:59Z"
 		},
 		{
 			"checksumSHA1": "Ya+baVBU/RkXXUWD3LGFmGJiiIg=",
